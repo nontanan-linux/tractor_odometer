@@ -14,14 +14,14 @@ A ROS 2 package that implements a kinematic model for a Tractor with N Drawbar T
 
 1.  **Clone the repository** into your workspace `src` folder:
     ```bash
-    cd ~/tracter_ws/src
-    git clone https://github.com/nontanan-linux/tracter_odometer.git
+    cd ~/tractor_ws/src
+    git clone https://github.com/nontanan-linux/tractor_odometer.git
     ```
 
 2.  **Build the package**:
     ```bash
-    cd ~/tracter_ws
-    colcon build --packages-select tracter_odometer
+    cd ~/tractor_ws
+    colcon build --packages-select tractor_odometer
     ```
 
 3.  **Source the workspace**:
@@ -37,17 +37,17 @@ Use the provided launch file to start the node with the default configuration an
 
 **Python Launch:**
 ```bash
-ros2 launch tracter_odometer tracter_odometer.launch.py
+ros2 launch tractor_odometer tractor_odometer.launch.py
 ```
 
 **XML Launch:**
 ```bash
-ros2 launch tracter_odometer tracter_odometer.launch.xml
+ros2 launch tractor_odometer tractor_odometer.launch.xml
 ```
 
 To launch with a specific namespace (e.g., for multi-robot setups):
 ```bash
-ros2 launch tracter_odometer tracter_odometer.launch.xml namespace:=/tractor1
+ros2 launch tractor_odometer tractor_odometer.launch.xml namespace:=/tractor1
 ```
 This will push all topics (e.g., `vehicle_markers`, `joint_states`) into the `/tractor1` namespace.
 
@@ -55,12 +55,12 @@ This will push all topics (e.g., `vehicle_markers`, `joint_states`) into the `/t
 
 If you prefer to run the node directly (make sure to load parameters manually or via a params file):
 ```bash
-ros2 run tracter_odometer odometer_node --ros-args --params-file $(ros2 pkg prefix tracter_odometer)/share/tracter_odometer/config/tracter_config.yaml
+ros2 run tractor_odometer odometer_node --ros-args --params-file $(ros2 pkg prefix tractor_odometer)/share/tractor_odometer/config/tractor_config.yaml
 ```
 
 ## Configuration
 
-The package is configured via `config/tracter_config.yaml`.
+The package is configured via `config/tractor_config.yaml`.
 
 ### Vehicle Parameters
 *   `L0`: Tractor wheelbase [m].
@@ -74,7 +74,7 @@ The hitch offset (distance from axle to hitch point) is calculated as `Overhang 
 *   `trailer_tail_length`: Distance from Trailer Rear Face to Hitch [m].
 
 ### Visualization Dimensions
-You can customize the size of the vehicle elements in `config/tracter_config.yaml`:
+You can customize the size of the vehicle elements in `config/tractor_config.yaml`:
 *   `tractor_width`: Width of the tractor [m].
 *   `tractor_front_overhang`: Distance from Front Axle to Front Face [m].
 *   `tractor_overhang`: Distance from Rear Axle to Rear Face (Rear Overhang) [m].
@@ -114,7 +114,7 @@ Colors are defined as RGBA vectors `[r, g, b, a]`.
 ## Visualization
 
 ### RViz Setup
-The launch files automatically open RViz with a pre-configured view (`rviz/tracter.rviz`).
+The launch files automatically open RViz with a pre-configured view (`rviz/tractor.rviz`).
 
 If setting up manually:
 1.  **Fixed Frame**: `map`

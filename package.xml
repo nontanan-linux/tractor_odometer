@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>tracter_odometer</name>
+  <name>tractor_odometer</name>
   <version>0.0.1</version>
   <description>TODO: Package description</description>
   <maintainer email="nontanan@gensurv.com">nontanan</maintainer>

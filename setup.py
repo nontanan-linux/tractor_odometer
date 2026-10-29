@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'tracter_odometer'
+package_name = 'tractor_odometer'
 
 setup(
     name=package_name,
@@ -10,9 +10,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/tracter_odometer.launch.py', 'launch/tracter_odometer.launch.xml']),
-        ('share/' + package_name + '/config', ['config/tracter_config.yaml']),
-        ('share/' + package_name + '/rviz', ['rviz/tracter.rviz']),
+        ('share/' + package_name + '/launch', ['launch/tractor_odometer.launch.py', 'launch/tractor_odometer.launch.xml', 'launch/tractor_position.launch.py']),
+        ('share/' + package_name + '/config', ['config/tractor_config.yaml']),
+        ('share/' + package_name + '/rviz', ['rviz/tractor.rviz']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,7 +27,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'odometer_node = tracter_odometer.odometer_node:main',
+            'odometer_node = tractor_odometer.odometer_node:main',
+            'nmb_odometer_node = tractor_odometer.nmb_odometer_node:main',
         ],
     },
 )

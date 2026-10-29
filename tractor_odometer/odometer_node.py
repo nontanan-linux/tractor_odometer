@@ -13,7 +13,7 @@ import math
 
 class TractorOdometer(Node):
     def __init__(self):
-        super().__init__('tracter_odometer')
+        super().__init__('tractor_odometer')
         
         # Parameters
         self.declare_parameter('L0', 2.0)

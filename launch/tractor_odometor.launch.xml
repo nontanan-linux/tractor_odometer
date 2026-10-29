@@ -1,0 +1,6 @@
+<launch>
+  <arg name="namespace" default=""/>
+  <node pkg="tractor_odometer" exec="odometer_node" name="tractor_odometer" output="screen" namespace="$(var namespace)">
+    <param from="$(find-pkg-share tractor_odometer)/config/tractor_config.yaml"/>
+  </node>
+</launch>
